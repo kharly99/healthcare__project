@@ -6,8 +6,8 @@ import numpy as np
 import pandas as pd
 
 # Load your model file
-with open('app.py', 'rb') as f:
-    model = joblib.load("model.pkl")
+with open('model(2).pkl', 'rb') as f:
+    model =pickle.load("model(2).pkl")
 
 st.title('How Age regulates Billing charges and how much patients spend for a particular medical condition predictor App')
 
