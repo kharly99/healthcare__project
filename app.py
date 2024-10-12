@@ -1,12 +1,13 @@
 
 import pickle
+import joblib
 import streamlit as st
 import numpy as np
 import pandas as pd
 
 # Load your model file
-with open('model(2).pkl', 'rb') as f:
-    model = pickle.load(f)
+with open('app.py', 'rb') as f:
+    model = joblib.load("model.pkl")
 
 st.title('How Age regulates Billing charges and how much patients spend for a particular medical condition predictor App')
 
