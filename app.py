@@ -14,15 +14,21 @@ st.title('How Age regulates Billing charges and how much patients spend for a pa
 # Add input widgets for user inputs
 age = st.slider("Age", min_value=18, max_value=85, value=51)
 
+medical_condition = st.selectbox(
+    " Medical Condition",
+    ["Cancer", "Diabetes", "Asthma", "Obesity", "Arthritis", "Hypertension" ]
+)
+
 insurance_provider = st.selectbox(
     "Insurance Provider",
     ['Blue Cross', 'Medicare', 'Aetna', 'UnitedHealthcare', 'Cigna']
 )
 
-medical_condition = st.selectbox(
-    " Medical Condition",
-    ["Cancer", "Diabetes", "Asthma", "Obesity", "Arthritis", "Hypertension" ]
+medication = st.selectbox(
+    "Medication",
+    ["Paracetamol", "Ibuprofen", "Aspirin", "Penicillin", "Lipitor"]
 )
+
 # When the 'Predict' button is clicked
 if st.button("Predict"):
     # Prepare the input data as a DataFrame (since pipelines often expect a DataFrame)
