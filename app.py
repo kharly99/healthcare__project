@@ -14,6 +14,11 @@ st.title('How Age regulates Billing charges and how much patients spend for a pa
 # Add input widgets for user inputs
 age = st.slider("Age", min_value=18, max_value=85, value=51)
 
+insurance_provider = st.selectbox(
+    "Insurance Provider",
+    ['Blue Cross', 'Medicare', 'Aetna', 'UnitedHealthcare', 'Cigna']
+)
+
 medical_condition = st.selectbox(
     " Medical Condition",
     ["Cancer", "Diabetes", "Asthma", "Obesity", "Arthritis", "Hypertension" ]
